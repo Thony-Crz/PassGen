@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Générateur de mot de passe</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="password-box">
+            <h1 class="password">i3R&C=!Z(#BK</h1>
+            <div class="copy-btn">
+                <i class="fa fa-regular fa-copy" id="copy-btn"></i>
+                <span>Copié</span>
+            </div>
+        </div>
+        <fieldset>
+            <legend hidden>Password Options</legend>
+            <div class="checkboxes-box">
+                <div class="uppercase">
+                    <input type="checkbox" name="characterType" id="uppercase">
+                    <label for="uppercase">Uppercase</label>
+                </div>
+                <div class="lowercase">
+                    <input type="checkbox" name="characterType" id="lowercase" checked>
+                    <label for="lowercase">Lowercase</label>
+                </div>
+                <div class="numbers">
+                    <input type="checkbox" name="characterType" id="numbers">
+                    <label for="numbers">Numbers</label>
+                </div>
+                <div class="symbols">
+                    <input type="checkbox" name="characterType" id="symbols">
+                    <label for="symbols">Symbols</label>
+                </div>
+            </div>
+        </fieldset>
+        <div class="password-length">
+            <label for="password-range">Longueur du mot de passe</label>
+            <input id="password-range" type="range" min="6" max="32" value="12" oninput="getPassLengthValue()" >
+            <div class="length-value">12</div>
+        </div>
+        <button class="generate-btn">Générer un mot de passe</button>
+        </div>
+    </div>
+    <script src="Password.js"></script>
+</body>
+</html>
